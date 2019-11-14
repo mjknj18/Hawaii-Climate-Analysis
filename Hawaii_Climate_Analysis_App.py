@@ -8,6 +8,7 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
+from statistics import mean
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
@@ -33,8 +34,10 @@ def home():
         <h3>Latest Temperature Information (/api/v1.0/tobs)</h3>
         <p>Returns Hawaii temperature data for the most active weather station for recent year on record (2016-08-24 through 2017-08-23).</p>
         <h2>Available Dynamic Routes</h2>
-        <h3>Temperature Summary by Start Date (/api/v1.0/<start>)</h3>
-        <p>Returns the minimum, maximum, and average temperature for all dates on or after the start date</p>'''
+        <h3>Temperature Summary by Start Date (/api/v1.0/start)</h3>
+        <p>Returns the minimum, maximum, and average temperature for all dates on or after the start date.\nDate must be in YYYY-MM-DD form, and must be between 2010-01-01 and 2017-08-23 inclusive.</p>
+        <h3>Temperature Summary by Start and End Dates (/api/v1.0/start/end)</h3>
+        <p>Returns the minimum, maximum, and average temperature for all dates between the start and end date inclusive.\nDates must be in YYYY-MM-DD form, and must be between 2010-01-01 and 2017-08-23 inclusive.</p>'''
 
 @app.route('/api/v1.0/precipitation', methods=['GET'])
 def api_precip():
@@ -120,7 +123,7 @@ def api_temp():
 @app.route('/api/v1.0/<start>', methods=['GET'])
 def api_start(start):
     #Query Database to Create Pandas Data Frame of Temperature Data for Selected Year-Long Period for Most Active Weather Station
-    temp_data = pd.read_sql('SELECT date, tobs FROM Measurement WHERE date >= (?) AND station = (?)', engine, params = (prior_date, 'USC00519281',))
+    temp_data = pd.read_sql('SELECT date, tobs FROM Measurement WHERE date >= (?)', engine, params = (start,))
 
     #Drop Rows with Missing Values
     temp_data = temp_data.dropna()
@@ -134,6 +137,11 @@ def api_start(start):
     #Convert Data Frame to Dictionary
     temp_dict = {date_name: date_group['tobs'].tolist() for date_name, date_group in temp_data.groupby('date')}
 
-    return jsonify(temp_dict)
+    summary_dict = {}
+    
+    for index in temp_dict:
+        summary_dict.update({index: [min(temp_dict[index]), max(temp_dict[index]), round(mean(temp_dict[index]),1)]})
+
+    return jsonify(summary_dict)
 
 app.run()
