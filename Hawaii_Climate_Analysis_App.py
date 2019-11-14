@@ -22,17 +22,19 @@ Station = Base.classes.station
 
 session = Session(engine)
 
-
 @app.route('/', methods=['GET'])
 def home():
     return '''<h1>Hawaii Climate Data API</h1>
         <h2>Available Static Routes</h2>
-        <h3>Precipitation (/api/v1.0/precipitation)</h3>
+        <h3>Latest Precipitation Information (/api/v1.0/precipitation)</h3>
         <p>Returns Hawaii precipitation data for the most recent year on record (2016-08-24 through 2017-08-23).</p>
-        <h3>Stations (/api/v1.0/stations)</h3>
+        <h3>Weather Station Information (/api/v1.0/stations)</h3>
         <p>Returns a list of all Hawaii weather stations.</p>
-        <h3>Temperature (/api/v1.0/tobs)</h3>
-        <p>Returns Hawaii temperature data for the most active weather station for recent year on record (2016-08-24 through 2017-08-23).</p>'''
+        <h3>Latest Temperature Information (/api/v1.0/tobs)</h3>
+        <p>Returns Hawaii temperature data for the most active weather station for recent year on record (2016-08-24 through 2017-08-23).</p>
+        <h2>Available Dynamic Routes</h2>
+        <h3>Temperature Summary by Start Date (/api/v1.0/<start>)</h3>
+        <p>Returns the minimum, maximum, and average temperature for all dates on or after the start date</p>'''
 
 @app.route('/api/v1.0/precipitation', methods=['GET'])
 def api_precip():
@@ -98,7 +100,26 @@ def api_temp():
     #Re-Assemble Date Value & Record as Year Prior Date
     prior_date = date_split[0] + '-' + date_split[1] + '-' + date_split[2]
 
-    #Query Database to Create Pandas Data Frame of Precipitation Data for Selected Year-Long Period for Most Active Weather Station
+    #Query Database to Create Pandas Data Frame of Temperature Data for Selected Year-Long Period for Most Active Weather Station
+    temp_data = pd.read_sql('SELECT date, tobs FROM Measurement WHERE date >= (?) AND station = (?)', engine, params = (prior_date, 'USC00519281',))
+
+    #Drop Rows with Missing Values
+    temp_data = temp_data.dropna()
+
+    #Set Date Values as Data Frame Index
+    temp_data = temp_data.set_index('date')
+
+    #Sort Data Frame by Date
+    temp_data = temp_data.sort_index()
+
+    #Convert Data Frame to Dictionary
+    temp_dict = {date_name: date_group['tobs'].tolist() for date_name, date_group in temp_data.groupby('date')}
+
+    return jsonify(temp_dict)
+
+@app.route('/api/v1.0/<start>', methods=['GET'])
+def api_start(start):
+    #Query Database to Create Pandas Data Frame of Temperature Data for Selected Year-Long Period for Most Active Weather Station
     temp_data = pd.read_sql('SELECT date, tobs FROM Measurement WHERE date >= (?) AND station = (?)', engine, params = (prior_date, 'USC00519281',))
 
     #Drop Rows with Missing Values
