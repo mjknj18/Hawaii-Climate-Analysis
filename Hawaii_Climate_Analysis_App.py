@@ -144,4 +144,28 @@ def api_start(start):
 
     return jsonify(summary_dict)
 
+@app.route('/api/v1.0/<start>/<end>', methods=['GET'])
+def api_end(start, end):
+    #Query Database to Create Pandas Data Frame of Temperature Data for Selected Year-Long Period for Most Active Weather Station
+    temp_data = pd.read_sql('SELECT date, tobs FROM Measurement WHERE date >= (?) AND date <= (?)', engine, params = (start, end,))
+
+    #Drop Rows with Missing Values
+    temp_data = temp_data.dropna()
+
+    #Set Date Values as Data Frame Index
+    temp_data = temp_data.set_index('date')
+
+    #Sort Data Frame by Date
+    temp_data = temp_data.sort_index()
+
+    #Convert Data Frame to Dictionary
+    temp_dict = {date_name: date_group['tobs'].tolist() for date_name, date_group in temp_data.groupby('date')}
+
+    summary_dict = {}
+    
+    for index in temp_dict:
+        summary_dict.update({index: [min(temp_dict[index]), max(temp_dict[index]), round(mean(temp_dict[index]),1)]})
+
+    return jsonify(summary_dict)
+
 app.run()
