@@ -111,6 +111,20 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 ### Climate Analysis
 
+#### Precipitation Analysis
+
+
+
+#### Weather Station Analysis
+
+
+
+#### Temperature Analysis
+
+
+
+#### Historical Analysis
+
 
 
 ### Climate API
@@ -130,9 +144,29 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 ### Climate Analysis
 
+#### Precipitation Analysis
+
+
+
+#### Weather Station Analysis
+
+
+
+#### Temperature Analysis
+
+
+
+#### Historical Analysis
+
 
 
 ### Climate API
+
+#### Static Routes
+
+
+
+#### Dynamic Routes
 
 
 
