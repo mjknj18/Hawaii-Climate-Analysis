@@ -54,7 +54,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 ### Climate API
 
-1. Define the Flask application environment and establish connection to the SQLite database.
+1. Define the Flask application environment and establish a connection to the SQLite database.
 2. Automap database, reflect the tables as classes, and create a session.
 3. Define a path for the API home screen.
 4. Define a function to display API functionality on the home screen.
