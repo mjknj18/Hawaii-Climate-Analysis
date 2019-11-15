@@ -113,19 +113,29 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Precipitation Analysis
 
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Precipitation_History.png>
 
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Precipitation_Summary.PNG>
 
 #### Weather Station Analysis
 
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Weather_Station_Activity.PNG>
 
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Busiest_Weather_Station_Stats.PNG>
 
 #### Temperature Analysis
 
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Temperature_Frequency.png>
 
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Temperature_T_Test.PNG>
 
 #### Historical Analysis
 
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Historical_Temperature.png>
 
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Historical_Precipitation_Totals.PNG>
+
+<img src = https://github.com/mjknj18/Hawaii-Climate-Analysis/blob/master/Images/Daily_Normals.png>
 
 ### Climate API
 
