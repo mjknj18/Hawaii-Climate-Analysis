@@ -30,8 +30,13 @@ Station = Base.classes.station
 #Create Session Link to SQLite Database
 session = Session(engine)
 
+#Define Path for App Home Screen
 @app.route('/', methods=['GET'])
+
+#Define Function for Home Screen Content
 def home():
+
+    #Display User Information on Home Screen
     return '''<h1>Hawaii Climate Data API</h1>
         <h2>Available Static Routes</h2>
         <h3>Latest Precipitation Information (/api/v1.0/precipitation)</h3>
@@ -46,7 +51,10 @@ def home():
         <h3>Temperature Summary by Start and End Dates (/api/v1.0/start/end)</h3>
         <p>Returns the minimum, maximum, and average temperature for all dates between the start and end date inclusive.\nDates must be in YYYY-MM-DD form, and must be between 2010-01-01 and 2017-08-23 inclusive.</p>'''
 
+#Define Path for Precipitation Static API
 @app.route('/api/v1.0/precipitation', methods=['GET'])
+
+#Define Function for Precipitation Static API Content
 def api_precip():
     #Extract All Avialable Dates from Measurements Table
     date_list = engine.execute('SELECT date FROM Measurement')
