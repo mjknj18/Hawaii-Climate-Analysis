@@ -152,9 +152,12 @@ def api_temp():
     #Display Temperature Information
     return jsonify(temp_dict)
 
-#
+#Define Path for Temperature Information Dynamic API with Start Date
 @app.route('/api/v1.0/<start>', methods=['GET'])
+
+#Define Function for Temperature Information Dynamic API with Start Date
 def api_start(start):
+
     #Query Database to Create Pandas Data Frame of Temperature Data for Selected Year-Long Period for Most Active Weather Station
     temp_data = pd.read_sql('SELECT date, tobs FROM Measurement WHERE date >= (?)', engine, params = (start,))
 
@@ -170,14 +173,22 @@ def api_start(start):
     #Convert Data Frame to Dictionary
     temp_dict = {date_name: date_group['tobs'].tolist() for date_name, date_group in temp_data.groupby('date')}
 
+    #Define Blank Dictionary for Temperature Summary Data
     summary_dict = {}
     
+    #Loop Through Daily Temperature Data
     for index in temp_dict:
+
+        #Calculate Daily Minimum/Maximum/Average Temperatures
         summary_dict.update({index: [min(temp_dict[index]), max(temp_dict[index]), round(mean(temp_dict[index]),1)]})
 
+    #Display Temperature Information
     return jsonify(summary_dict)
 
+#Define Path for Temperature Information Dynamic API with Start & End Dates
 @app.route('/api/v1.0/<start>/<end>', methods=['GET'])
+
+#Define Function for Temperature Information Dynamic API with Start & End Date
 def api_end(start, end):
     #Query Database to Create Pandas Data Frame of Temperature Data for Selected Year-Long Period for Most Active Weather Station
     temp_data = pd.read_sql('SELECT date, tobs FROM Measurement WHERE date >= (?) AND date <= (?)', engine, params = (start, end,))
@@ -194,11 +205,16 @@ def api_end(start, end):
     #Convert Data Frame to Dictionary
     temp_dict = {date_name: date_group['tobs'].tolist() for date_name, date_group in temp_data.groupby('date')}
 
+    #Define Blank Dictionary for Temperature Summary Data
     summary_dict = {}
     
+    #Loop Through Daily Temperature Data
     for index in temp_dict:
+
+        #Calculate Daily Minimum/Maximum/Average Temperatures
         summary_dict.update({index: [min(temp_dict[index]), max(temp_dict[index]), round(mean(temp_dict[index]),1)]})
 
+    #Display Temperature Data
     return jsonify(summary_dict)
 
 #Initialize Flask App
