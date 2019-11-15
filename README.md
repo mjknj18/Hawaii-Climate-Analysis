@@ -19,7 +19,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 #### Temperature Analysis
 
 1. For the most active weather station, what are the most common temperature observations for the last twelve months on record?
-2. Are the averages of the recorded June temperature data and December temperature data statistically significant?
+2. Are the averages of the recorded June and December temperature observations statistically significant?
 
 #### Historical Analysis
 
@@ -63,14 +63,16 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Weather Station Analysis
 
-1. Query weather station information and the number of records tied to each station, and display the results.
-2. Query temperature observations for the most active weather station in the aforementioned year-long date range.
-3. Create twelve equally sized temperature range bins and sort temperature observations into the appropriate bins.
-4. Plot a histogram of the temperature distribution for the most active weather station in that date range.
+1. Query weather station information and the number of records tied to each station.
+2. Query maximum, minimum, and average observed temperature for all data from the most active weather station.
 
 #### Temperature Analysis
 
-
+1. Query temperature observations for the most active weather station in the aforementioned year-long date range.
+2. Create twelve equally sized temperature range bins and sort temperature observations into the appropriate bins.
+3. Plot a histogram of the temperature distribution for the most active weather station in that date range.
+4. Query all June and December temperature observations in separate data frames.
+5. Perform independent t-test on the two sets of data, and analyze t-statistic and p-value.
 
 #### Historical Analysis
 
