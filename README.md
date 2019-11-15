@@ -66,7 +66,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 1. Query weather station information and the number of records tied to each station, and display the results.
 2. Query temperature observations for the most active weather station in the aforementioned year-long date range.
 3. Create twelve equally sized temperature range bins and sort temperature observations into the appropriate bins.
-4. Plot a histogram of the temperature distribution of the most active weather station in that date range.
+4. Plot a histogram of the temperature distribution for the most active weather station in that date range.
 
 #### Temperature Analysis
 
