@@ -51,11 +51,12 @@ def home():
         <h3>Temperature Summary by Start and End Dates (/api/v1.0/start/end)</h3>
         <p>Returns the minimum, maximum, and average temperature for all dates between the start and end date inclusive.\nDates must be in YYYY-MM-DD form, and must be between 2010-01-01 and 2017-08-23 inclusive.</p>'''
 
-#Define Path for Precipitation Static API
+#Define Path for Precipitation Information Static API
 @app.route('/api/v1.0/precipitation', methods=['GET'])
 
-#Define Function for Precipitation Static API Content
+#Define Function for Precipitation Information Static API Content
 def api_precip():
+
     #Extract All Avialable Dates from Measurements Table
     date_list = engine.execute('SELECT date FROM Measurement')
 
@@ -87,21 +88,36 @@ def api_precip():
     #Convert Data Frame to Dictionary
     precip_dict = {date_name: date_group['prcp'].tolist() for date_name, date_group in precip_data.groupby('date')}
 
+    #Display Precipitation Information
     return jsonify(precip_dict)
 
+#Define Path for Station Information Static API
 @app.route('/api/v1.0/stations', methods=['GET'])
+
+#Define Function for Station Information Static API Content
 def api_stations():
+    
+    #Extract All Station IDs and Names from Stations Table
     active_stations = engine.execute('SELECT station, name FROM Station')
 
+    #Define Blank Dictionary for Station IDs and Names
     station_list = {}
 
+    #Loop Through Station ID & Name Pairs
     for occurences in active_stations:
+
+        #Create Dictionary of Station IDs & Names
         station_list.update({occurences[0]: occurences[1]})
 
+    #Display Station Information
     return jsonify(station_list)
 
+#Define Path for Temperature Information Static API
 @app.route('/api/v1.0/tobs', methods=['GET'])
+
+#Define Function for Temperature Information Static API Content
 def api_temp():
+
     #Extract All Avialable Dates from Measurements Table
     date_list = engine.execute('SELECT date FROM Measurement')
 
@@ -133,8 +149,10 @@ def api_temp():
     #Convert Data Frame to Dictionary
     temp_dict = {date_name: date_group['tobs'].tolist() for date_name, date_group in temp_data.groupby('date')}
 
+    #Display Temperature Information
     return jsonify(temp_dict)
 
+#
 @app.route('/api/v1.0/<start>', methods=['GET'])
 def api_start(start):
     #Query Database to Create Pandas Data Frame of Temperature Data for Selected Year-Long Period for Most Active Weather Station
