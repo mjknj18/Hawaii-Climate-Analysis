@@ -1,6 +1,6 @@
 # Hawaii-Climate-Analysis
 
-
+The goal of this project was to extract, process, and analyze Hawaii climate data contained in a SQLite database, as well as construct an API for raw climate data. For the analysis portion, Python with SQLAlchemy was utilized to store and inspect the data, while Python with Pandas, Numpy, and Matplotlib was used to generate meaningful visualizations in a common Jupyter Notebook. The API was developed in VS Code using Python with SQLAlchemy to store and inspect the data, while Python with Flask powered the development of the web interface. 
 
 ## Questions
 
@@ -23,9 +23,9 @@
 
 #### Historical Analysis
 
-1. Given a set of vacation dates, what are the historical maximum, minimum, and average temperatures for the same date range one year prior?
-2. Given a set of vacation dates, what is the total precipitation for each weather station for the same date range one year prior?
-3. Given a set of vacation dates, what are the daily normal maximum, minimum, and average temperatures for the same date range for all years on record?
+1. Given a set of start and end dates, what are the historical maximum, minimum, and average temperatures for the same date range one year prior?
+2. Given a set of start and end dates, what is the total precipitation for each weather station for the same date range one year prior?
+3. Given a set of start and end dates, what are the daily normal maximum, minimum, and average temperatures for the same date range for all years on record?
 
 ### Climate API
 
