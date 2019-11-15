@@ -10,17 +10,24 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from statistics import mean
 
+#Define Flask App Environment
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
+#Define SQLite Database Engine
 engine = create_engine("sqlite:///Hawaii_Climate_Data/hawaii.sqlite")
 
+#Map Database from SQLite File
 Base = automap_base()
+
+#Import Tables from Database
 Base.prepare(engine, reflect=True)
 
+#Define Classes as Table Names
 Measurement = Base.classes.measurement
 Station = Base.classes.station
 
+#Create Session Link to SQLite Database
 session = Session(engine)
 
 @app.route('/', methods=['GET'])
@@ -168,4 +175,5 @@ def api_end(start, end):
 
     return jsonify(summary_dict)
 
+#Initialize Flask App
 app.run()
