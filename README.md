@@ -54,7 +54,26 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 ### Climate API
 
+1. Define the Flask application environment and establish connection to the SQLite database.
+2. Automap database, reflect the tables as classes, and create a session.
+3. Define a path for the API home screen.
+4. Define a function to display API functionality on the home screen.
 
+#### Static Routes
+
+1. Define a path for the precipitation information API. 
+2. Define a function to query precipitation data for the last twelve months on record and display it in JSON format.
+3. Define a path for the weather station API.
+4. Define a function to query weather station information and display it in JSON format.
+5. Define a path for the temperature information API.
+6. Define a function to query temperature data for the last twelve months on record and display it in JSON format.
+
+#### Dynamic Routes
+
+1. Define a path for the temperature information API that accepts a start date.
+2. Define a function to imports the given start date, query the temperature data on and after that date, calculate the appropriate daily summary values, and display those summary values in JSON format.
+3. Define a path for the temperature information API that accepts start and end dates.
+4. Define a function to imports the given start and end dates, query the temperature data on and between those dates, calculate the appropriate daily summary values, and display those summary values in JSON format.
 
 ## Results
 
