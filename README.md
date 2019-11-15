@@ -8,7 +8,7 @@
 
 #### Precipitation Analysis
 
-1. How much total precipitation did Hawaii receive in the last twelve months on record?
+1. How much total precipitation did Hawaii receive during the last twelve months on record?
 2. What are the summary statistics for that precipitation data?
 
 #### Weather Station Analysis
@@ -25,11 +25,20 @@
 
 1. Given a set of vacation dates, what are the historical maximum, minimum, and average temperatures for the same date range one year prior?
 2. Given a set of vacation dates, what is the total rainfall for each weather station for the same date range one year prior?
-3. Given a set of vacation dates, what are the daily normal maximum, minimum, and average temperatures for the same date range for all years on record.
+3. Given a set of vacation dates, what are the daily normal maximum, minimum, and average temperatures for the same date range for all years on record?
 
 ### Climate API
 
+#### Static Routes
 
+1. How much total precipitation did Hawaii receive during the last twelve months on record?
+2. What are the ID numbers and names of the weather stations collecting climate data?
+3. What are the temperatures observed by all Hawaii weather stations during the last twelve months on record?
+
+#### Dynamic Routes
+
+1. For a given start date, what are the maximum, minimum, and average temperatures for all dates on and beyond that date?
+2. For a given start and end date combination, what are the maximum, minimum, and average temperatures for all dates between those dates inclusive?
 
 ## Datasets
 
