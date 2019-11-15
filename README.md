@@ -71,12 +71,18 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 1. Query temperature observations for the most active weather station in the aforementioned year-long date range.
 2. Create twelve equally sized temperature range bins and sort temperature observations into the appropriate bins.
 3. Plot a histogram of the temperature distribution for the most active weather station in that date range.
-4. Query all June and December temperature observations in separate data frames.
+4. Query all June and December temperature observations in separate Pandas data frames.
 5. Perform independent t-test on the two sets of data, and analyze t-statistic and p-value.
 
 #### Historical Analysis
 
-
+1. Determine start and end dates for a theoretical Hawaii trip, and calculate dates one year prior to those trip dates.
+2. Query maximum, minimum, and average observed temperature for all records on or within the historical date range.
+3. Plot bar chart of the average observed temperature with an error bar reflectng the difference in maximum and minimum observed temperatures.
+4. Query weather station information and the total precipitation recorded by each station for the historical date range, and sort in descending order.
+5. Query maximum, minimum, and average observed temperature for all records on days from any year that fall on or within the historical date range.
+6. Combine records into Pandas data frame and set date as the index.
+7. Plot area chart of maximum, minimum, and average observed temperatures.
 
 ### Climate API
 
