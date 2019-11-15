@@ -6,7 +6,26 @@
 
 ### Climate Analysis
 
+#### Precipitation Analysis
 
+1. How much total precipitation did Hawaii receive in the last twelve months on record?
+2. What are the summary statistics for that precipitation data?
+
+#### Weather Station Analysis
+
+1. What are the most active weather stations by observation count?
+2. What are the maximum, minimum, and average temperatures for the most active weather station?
+
+#### Temperature Analysis
+
+1. For the most active weather station, what are the most common temperature observations for the last twelve months on record?
+2. Are the means of the recorded June temperature data and December temperature data statistically significant?
+
+#### Historical Analysis
+
+1. Given a set of vacation dates, what are the historical maximum, minimum, and average temperatures for the same date range one year prior?
+2. Given a set of vacation dates, what is the total rainfall for each weather station for the same date range one year prior?
+3. Given a set of vacation dates, what are the daily normal maximum, minimum, and average temperatures for the same date range for all years on record.
 
 ### Climate API
 
