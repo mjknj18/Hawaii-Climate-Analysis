@@ -64,7 +64,16 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 ### Climate API
 
+#### Static Routes
 
+1. http://127.0.0.1:5000/api/v1.0/precipitation
+2. http://127.0.0.1:5000/api/v1.0/stations
+3. http://127.0.0.1:5000/api/v1.0/tobs
+
+#### Dynamic Routes
+
+1. http://127.0.0.1:5000/api/v1.0/2016-01-01
+2. http://127.0.0.1:5000/api/v1.0/2016-01-01/2016-12-31
 
 ## Observations
 
