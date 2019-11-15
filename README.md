@@ -64,7 +64,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 #### Weather Station Analysis
 
 1. Query weather station information and the number of records tied to each station.
-2. Query maximum, minimum, and average observed temperature for all data from the most active weather station.
+2. Query maximum, minimum, and average observed temperature for all records from the most active weather station.
 
 #### Temperature Analysis
 
