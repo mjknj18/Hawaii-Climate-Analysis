@@ -174,12 +174,13 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Static Routes
 
-1. The URL for the precipitation information API returns the precipitation amounts recorded by each weather station on each day for the most recent year of data.
-2. 
+1. For each day in the latest year on record, multiple precipitation amounts are present. These are representative of precipitation differences across the region.
+2. A total of nine weather stations contributed observations to the baseline climate data.
+3. For each day in the latest year on record, the most active weather station saw temperatures from 65 to 86 degrees Fahrenheit. The lowest temperatures were recorded in the winter months and the hottest temperatures were recorded in the summer months. 
 
 #### Dynamic Routes
 
-
+1. 
 
 ## Disclaimer
 
