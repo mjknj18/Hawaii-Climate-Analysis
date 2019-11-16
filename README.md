@@ -33,7 +33,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 1. How much total precipitation did Hawaii receive during the last twelve months on record?
 2. What are the weather stations collecting climate data?
-3. What are the temperatures observed by all Hawaii weather stations during the last twelve months on record?
+3. What were the temperatures observed by the most active Hawaii weather station during the last twelve months on record?
 
 #### Dynamic Routes
 
@@ -174,13 +174,14 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Static Routes
 
-1. For each day in the latest year on record, multiple precipitation amounts were observed, as different weather stations saw varying amounts of precipitation.
-2. A total of nine weather stations contributed observations to the baseline climate data.
-3. For each day in the latest year on record, the most active weather station saw temperatures from 65 to 86 degrees Fahrenheit. The lowest temperatures were recorded in the winter months and the hottest temperatures were recorded in the summer months. 
+1. The URL for the precipitation information API correctly displays all of the recorded precipitation amounts for each day during the latest year on record. 
+2. The URL for the weather station information API correctly displays all of weather stations that contributed observations to the baseline climate data.
+3. The URL for the temperature information API correctly displays the observed temperatures for the most active weather station during the latest year on record.
 
 #### Dynamic Routes
 
-1. 
+1. For a given start date of 2016-01-01, the URL for the temperature information API returns the maximum, minimum, and average temperatures for all dates on or after that start date.
+2. for a given start and end date pair of 2016-01-01 and 2016-12-31, the URL for the temperature information API returns the maximum, minimum, and average temperatures for all dates on or between those start and end dates.
 
 ## Disclaimer
 
