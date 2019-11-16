@@ -166,7 +166,8 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Temperature Analysis
 
-
+1. For the most active weather station in the most recent twelve month period, the majority of temperatures were between 69 and 79 degrees Fahrenheit, with occasional days seeing temperatures as high as 83 degrees Fahrenheit and as low as 59 degrees Fahrenheit.
+2. The T-Test of the June and December temperature data produced a P-Value of 3.902e-191. This is far below the accepted cutoff of 0.05 and indicated that the averages of the two sets of data are statistically significant. 
 
 #### Historical Analysis
 
