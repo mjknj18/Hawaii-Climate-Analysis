@@ -174,7 +174,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Static Routes
 
-1. For each day in the latest year on record, multiple precipitation amounts are present. These are representative of precipitation differences across the region.
+1. For each day in the latest year on record, multiple precipitation amounts were observed, as different weather stations saw varying amounts of precipitation.
 2. A total of nine weather stations contributed observations to the baseline climate data.
 3. For each day in the latest year on record, the most active weather station saw temperatures from 65 to 86 degrees Fahrenheit. The lowest temperatures were recorded in the winter months and the hottest temperatures were recorded in the summer months. 
 
