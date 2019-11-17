@@ -32,13 +32,13 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 #### Static Routes
 
 1. How much total precipitation did Hawaii receive during the last twelve months on record?
-2. What are the weather stations collecting climate data?
-3. What were the temperatures observed by the most active Hawaii weather station during the last twelve months on record?
+2. What weather stations are collecting climate data?
+3. For the most active weather station, what is the recorded temperature for each day during the last twelve months on record?
 
 #### Dynamic Routes
 
-1. For a given start date, what are the maximum, minimum, and average temperatures for all dates on and beyond that date?
-2. For a given start and end date combination, what are the maximum, minimum, and average temperatures for all dates on and between those dates?
+1. Given a start date, what are the maximum, minimum, and average temperatures for all dates on and beyond that date?
+2. Given a set of start and end date, what are the maximum, minimum, and average temperatures for those dates and all in-between?
 
 ## Datasets
 
