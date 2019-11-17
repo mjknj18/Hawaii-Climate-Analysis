@@ -173,7 +173,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 1. For a date range of 2017-12-18 to 2018-01-17, the average temperature for the same period one year prior was approximately 70 degrees Fahrenheit, with an error window of approximately 20 degrees Fahrenheit.
 2. For a date range of 2017-12-18 to 2018-01-17, the Manoa Lyon Arbo weather station had the highest recorded precipitation amount of 10.93 inches for the same period one year prior. All other weather stations recorded less than 3.25 inches of precipitation in that prior year period.
-3. For a date range of 2017-12-18 to 2018-01-17, the daily maximum, minimum, and average temperatures for the same period in all prior years were between 75 and 81 degrees Fahrenheit, 55 and 67 degrees Fahrenheit, and 68 and 73 degrees Fahrenheit respectively.
+3. For a date range of 2017-12-18 to 2018-01-17, the daily maximum, minimum, and average temperatures for the same days in all prior years were between 75 and 81 degrees Fahrenheit, 55 and 67 degrees Fahrenheit, and 68 and 73 degrees Fahrenheit respectively.
 
 ### Climate API
 
