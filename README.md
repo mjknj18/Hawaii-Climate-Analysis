@@ -63,7 +63,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Weather Station Analysis
 
-1. Query weather station information and the number of records tied to each station.
+1. Query weather station information and the number of records tied to each station, and sort by the latter.
 2. Query maximum, minimum, and average observed temperature for all records from the most active weather station.
 
 #### Temperature Analysis
@@ -72,7 +72,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 2. Create twelve equally sized temperature range bins and sort temperature observations into the appropriate bins.
 3. Plot a histogram of the temperature distribution for the most active weather station in that date range.
 4. Query all June and December temperature observations in separate Pandas data frames.
-5. Perform independent t-test on the two sets of data, and analyze t-statistic and p-value.
+5. Perform an independent t-test on the two sets of data, and analyze the t-statistic and p-value.
 
 #### Historical Analysis
 
