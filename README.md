@@ -185,8 +185,8 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Dynamic Routes
 
-1. For a given start date of 2016-01-01, the URL for the temperature information API returns the maximum, minimum, and average temperatures for all dates on or after that start date.
-2. For a given start and end date set of 2016-01-01 and 2016-12-31, the URL for the temperature information API returns the maximum, minimum, and average temperatures for all dates for or in-between those start and end dates.
+1. For a given start date of 2016-01-01, the URL for the temperature information API returns the daily maximum, minimum, and average temperatures on or after that start date.
+2. For a given start and end date set of 2016-01-01 and 2016-12-31, the URL for the temperature information API returns the daily maximum, minimum, and average temperatures for or in-between those start and end dates.
 
 ## Disclaimer
 
