@@ -50,7 +50,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 ### Climate Analysis
 
-1. Define the Flask application environment and establish a connection to the SQLite database.
+1. Define the SQLAlchemy environment and establish a connection to the SQLite database.
 2. Automap database, reflect the tables as classes, and create a session.
 
 #### Precipitation Analysis
