@@ -161,8 +161,8 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Weather Station Analysis
 
-1. The most active weather station was Waihee (2272 observations), which was closely followed by Waikiki (2724 observations) and Kaneohe (2709 observations).
-2. The maximum, minimum, and average temperatures for the most active weather station were 85, 54, and 71.7 degrees Fahrenheit respectively.
+1. The most active weather station was Waihee (2772 observations), closely followed by Waikiki (2724 observations) and Kaneohe (2709 observations).
+2. The maximum, minimum, and average temperatures for the most active weather station (Waihee) were 85, 54, and 71.7 degrees Fahrenheit respectively.
 
 #### Temperature Analysis
 
