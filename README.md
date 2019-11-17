@@ -80,7 +80,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 2. Query maximum, minimum, and average observed temperature for all records on or within the year prior date range.
 3. Plot a bar chart of the average observed temperature with an error bar reflecting the difference in maximum and minimum observed temperatures.
 4. Query weather station information and the total precipitation recorded by each station for the year prior date range, and sort in descending order.
-5. Query maximum, minimum, and average observed temperature for all records on days from any year that fall on or within the year prior date range.
+5. Query maximum, minimum, and average observed temperature for all records from any year that fall on days within the year prior date range.
 6. Combine records into a Pandas data frame and set date as the index.
 7. Plot an area chart of maximum, minimum, and average observed temperatures.
 
