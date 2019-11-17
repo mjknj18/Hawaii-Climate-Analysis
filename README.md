@@ -76,7 +76,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Historical Analysis
 
-1. Determine start and end dates for a theoretical Hawaii trip, and calculate dates one year prior to those trip dates.
+1. Determine a set of start and end dates, and calculate dates one year prior to those trip dates.
 2. Query maximum, minimum, and average observed temperature for all records on or within the historical date range.
 3. Plot a bar chart of the average observed temperature with an error bar reflectng the difference in maximum and minimum observed temperatures.
 4. Query weather station information and the total precipitation recorded by each station for the historical date range, and sort in descending order.
