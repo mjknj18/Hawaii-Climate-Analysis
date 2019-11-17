@@ -180,7 +180,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 #### Static Routes
 
 1. The URL for the precipitation information API correctly displays all of the recorded precipitation amounts for each day during the latest year on record. 
-2. The URL for the weather station information API correctly displays all of weather stations that contributed obsere daily vations to the baseline climate data.
+2. The URL for the weather station information API correctly displays all of weather stations that contributed daily observations to the baseline climate data.
 3. The URL for the temperature information API correctly displays the observed temperatures for the most active weather station during the latest year on record.
 
 #### Dynamic Routes
