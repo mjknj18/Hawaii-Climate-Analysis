@@ -95,8 +95,8 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 1. Define a path for the precipitation information API. 
 2. Define a function to query precipitation data for the last twelve months on record and display it in JSON format.
-3. Define a path for the weather station API.
-4. Define a function to query weather station information and display it in JSON format.
+3. Define a path for the weather station information API.
+4. Define a function to query weather station data and display it in JSON format.
 5. Define a path for the temperature information API.
 6. Define a function to query temperature data for the last twelve months on record and display it in JSON format.
 
