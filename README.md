@@ -103,9 +103,9 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 #### Dynamic Routes
 
 1. Define a path for the temperature information API that accepts a start date.
-2. Define a function to imports the given start date, query the temperature data on and after that date, calculate the appropriate daily summary values, and display those summary values in JSON format.
+2. Define a function to import the given start date, query the temperature data on and after that date, calculate the appropriate daily summary values, and display those summary values in JSON format.
 3. Define a path for the temperature information API that accepts start and end dates.
-4. Define a function to imports the given start and end dates, query the temperature data on and between those dates, calculate the appropriate daily summary values, and display those summary values in JSON format.
+4. Define a function to import the given start and end dates, query the temperature data for and in-between those dates, calculate the appropriate daily summary values, and display those summary values in JSON format.
 
 ## Results
 
