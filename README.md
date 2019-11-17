@@ -156,7 +156,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Precipitation Analysis
 
-1. For the majority of days in the most recent twelve month period, the total precipitation amounts for Hawaii were below two inches, with occasional days of up to seven inches.
+1. For the majority of days in the most recent twelve month period, the total precipitation amounts in Hawaii were at or below two inches, with occasional days seeing anywhere up to nearly seven inches.
 2. In the most recent twelve month period, there were 2021 recorded precipitation amounts, which had a mean of 0.177 inches, a standard deviation of 0.461 inches, and a maximum of 6.7 inches.
 
 #### Weather Station Analysis
