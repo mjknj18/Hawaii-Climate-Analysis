@@ -38,7 +38,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 #### Dynamic Routes
 
 1. Given a start date, what are the maximum, minimum, and average temperatures for all dates on and beyond that date?
-2. Given a set of start and end date, what are the maximum, minimum, and average temperatures for those dates and all in-between?
+2. Given a set of start and end dates, what are the maximum, minimum, and average temperatures for those dates and all in-between?
 
 ## Datasets
 
