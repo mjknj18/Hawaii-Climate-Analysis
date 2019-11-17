@@ -51,15 +51,15 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 ### Climate Analysis
 
 1. Define the SQLAlchemy environment and establish a connection to the SQLite database.
-2. Automap database, reflect the tables as classes, and create a session.
+2. Automap the database, reflect the tables as classes, and create a session.
 
 #### Precipitation Analysis
 
-1. Calculate the year-long range from last available record in database.
+1. Calculate the latest twelve month range from last available record in the database.
 2. Query precipitation data for dates within that range and sort records from oldest to newest.
 3. Plot the precipitation data for that date range.
-4. Calculate summary statistics for precipitation data.
-5. Combine the calculated values into a Pandas data frame.
+4. Calculate the summary statistics for the precipitation data.
+5. Create a Pandas data frame of the calculated statistical values.
 
 #### Weather Station Analysis
 
@@ -87,7 +87,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 ### Climate API
 
 1. Define the Flask application environment and establish a connection to the SQLite database.
-2. Automap database, reflect the tables as classes, and create a session.
+2. Automap the database, reflect the tables as classes, and create a session.
 3. Define a path for the API home screen.
 4. Define a function to display API functionality on the home screen.
 
