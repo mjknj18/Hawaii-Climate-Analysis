@@ -55,7 +55,7 @@ The goal of this project was to extract, process, and analyze Hawaii climate dat
 
 #### Precipitation Analysis
 
-1. Calculate the latest twelve month range from last available record in the database.
+1. Calculate the latest twelve month period from last available record in the database.
 2. Query precipitation data for dates within that range and sort records from oldest to newest.
 3. Plot the precipitation data for that date range.
 4. Calculate the summary statistics for the precipitation data.
